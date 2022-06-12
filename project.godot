@@ -1,0 +1,39 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="Roller Ball"
+run/main_scene="res://Main.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Roller Ball"
+config/icon="res://icon.png"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+3d_physics/layer_1="Player"
+3d_physics/layer_2="Obstacle"
+3d_physics/layer_3="Ground"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+3d/physics_engine="GodotPhysics"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+gles2/compatibility/enable_high_float.Android=true
+environment/default_environment="res://default_en_with_sun.tres"
